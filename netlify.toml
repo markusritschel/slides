@@ -1,3 +1,4 @@
+
 [build]
 publish = "dist"
 command = "pnpm run build"
@@ -7,12 +8,20 @@ NODE_VERSION = "20"
 PLAYWRIGHT_BROWSERS_PATH = "0"
 
 
+[[redirects]]
+from = "/2024/test/src"
+to = "https://github.com/antfu/talks/tree/main/2024-09-10"
+status = 302
 
 [[redirects]]
 from = "2024-09-10"
-to = "https://markusritschel-talks.netlify.app/2024/test/"
+to = "https://talks.antfu.me/2024/test/"
 status = 301
 
+[[redirects]]
+from = "/2024/test/*"
+to = "/2024/test/index.html"
+status = 200
 
 [[redirects]]
 from = "/"
