@@ -1,11 +1,12 @@
-import fs from 'node:fs/promises' // Importing the file system module with promises
-import { dirname, resolve } from 'node:path' // Importing path utilities
-import process from 'node:process' // Importing process module
-import fg from 'fast-glob' // Importing fast-glob for file pattern matching
+import fs from 'node:fs/promises'
+import { dirname, resolve } from 'node:path'
+import process from 'node:process'
+import fg from 'fast-glob'
 
-const github_repo = "https://github.com/antfu/talks"
+// NOTE: Add personal URLs here
+const github_repo = "https://github.com/markusritschel/slides"
 const talks_base_url = "https://markusritschel-talks.netlify.app"
-const talks_overview_website = "https://antfu.me/talks"
+const talks_overview_website = "https://markusritschel.de/talks"
 
 // Finding all package.json files in the src directories of subdirectories
 const packageFiles = (await fg('*/src/package.json', {
@@ -98,3 +99,4 @@ status = 302
 
 // Writing the content to the netlify.toml file
 await fs.writeFile('netlify.toml', content, 'utf-8')
+console.log(`Updated all redirects in netlify.toml`);

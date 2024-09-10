@@ -18,17 +18,17 @@ status = 301
 
 [[redirects]]
 from = "/2024/xmas/src"
-to = "https://github.com/antfu/talks/tree/main/2024-12-24_xmas"
+to = "https://github.com/markusritschel/slides/tree/main/2024-12-24_xmas"
 status = 302
 
 [[redirects]]
 from = "/2024-12-24_xmas/pdf"
-to = "https://github.com/antfu/talks/blob/main/2024-12-24_xmas/2024-12-24-xmas.pdf?raw=true"
+to = "https://github.com/markusritschel/slides/blob/main/2024-12-24_xmas/2024-12-24-xmas.pdf?raw=true"
 status = 302
 
 [[redirects]]
 from = "/2024/xmas/pdf"
-to = "https://github.com/antfu/talks/blob/main/2024-12-24_xmas/2024-12-24-xmas.pdf?raw=true"
+to = "https://github.com/markusritschel/slides/blob/main/2024-12-24_xmas/2024-12-24-xmas.pdf?raw=true"
 status = 302
 
 [[redirects]]
@@ -44,7 +44,7 @@ status = 301
 
 [[redirects]]
 from = "/2025/nye/src"
-to = "https://github.com/antfu/talks/tree/main/2025-01-01_nye"
+to = "https://github.com/markusritschel/slides/tree/main/2025-01-01_nye"
 status = 302
 
 [[redirects]]
@@ -55,5 +55,5 @@ status = 200
 
 [[redirects]]
 from = "/"
-to = "https://antfu.me/talks"
+to = "https://markusritschel.de/talks"
 status = 302

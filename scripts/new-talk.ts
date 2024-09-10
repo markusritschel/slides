@@ -41,6 +41,7 @@ rl.question('Enter the date (YYYY-MM-DD): ', (date) => {
         const year = date.split('-')[0];
         packageJson.scripts.build = `slidev build --base /${year}/${talkName}/ --out ../../dist/${year}/${talkName}/`;
         packageJson.scripts.export = `slidev export --per-slide --output ../${date}-${talkName}.pdf`;
+        console.log(`Successfully updated "build" and "export" script in package.json. You may want to adjust these.`);
 
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
