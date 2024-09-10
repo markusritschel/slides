@@ -15,7 +15,7 @@ status = 302
 
 [[redirects]]
 from = "2024-09-10"
-to = "https://talks.antfu.me/2024/test/"
+to = "https://markusritschel-talks.netlify.app/2024/test/"
 status = 301
 
 [[redirects]]
