@@ -7,13 +7,11 @@
     "dev": "esno scripts/picker.ts dev --open",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
+    "new-talk": "esno scripts/new-talk.ts",
     "update": "esno scripts/redirects.ts",
     "prepare": "git submodule update --init --recursive"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.22.0",
-    "@eslint/config-inspector": "^0.5.1",
-    "@iconify/json": "^2.2.226",
     "@slidev/cli": "^0.49.16",
     "@slidev/client": "^0.49.16",
     "@slidev/theme-default": "^0.25.0",
