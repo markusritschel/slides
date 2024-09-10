@@ -5,7 +5,7 @@ import fg from 'fast-glob'
 
 // NOTE: Add personal URLs here
 const github_repo = "https://github.com/markusritschel/slides"
-const talks_base_url = "https://markusritschel-talks.netlify.app"
+const talks_base_url = "https://slides.markusritschel.de"
 const talks_overview_website = "https://markusritschel.de/talks"
 
 // Finding all package.json files in the src directories of subdirectories

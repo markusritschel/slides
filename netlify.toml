@@ -13,7 +13,7 @@ PLAYWRIGHT_BROWSERS_PATH = "0"
 
 [[redirects]]
 from = "2024-12-24_xmas"
-to = "https://markusritschel-talks.netlify.app/2024/xmas/"
+to = "https://slides.markusritschel.de/2024/xmas/"
 status = 301
 
 [[redirects]]
@@ -39,7 +39,7 @@ status = 200
 
 [[redirects]]
 from = "2025-01-01_nye"
-to = "https://markusritschel-talks.netlify.app/2025/nye/"
+to = "https://slides.markusritschel.de/2025/nye/"
 status = 301
 
 [[redirects]]
