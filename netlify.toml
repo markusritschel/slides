@@ -7,11 +7,6 @@ NODE_VERSION = "20"
 PLAYWRIGHT_BROWSERS_PATH = "0"
 
 
-[[redirects]]
-from = "/2021/pdf"
-to = "https://github.com/antfu/talks/blob/main/2021-04-29/2021-04-29-vueday-en.pdf?raw=true"
-status = 302
-
 
 [[redirects]]
 from = "2024-09-10"
