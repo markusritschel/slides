@@ -12,6 +12,22 @@ PLAYWRIGHT_BROWSERS_PATH = "0"
 
 
 [[redirects]]
+from = "2024-07-18_coding-spaces-kickoff"
+to = "https://slides.markusritschel.de/2024/coding-spaces-kickoff/"
+status = 301
+
+[[redirects]]
+from = "/2024/coding-spaces-kickoff/src"
+to = "https://github.com/markusritschel/slides/tree/main/2024-07-18_coding-spaces-kickoff"
+status = 302
+
+[[redirects]]
+from = "/2024/coding-spaces-kickoff/*"
+to = "/2024/coding-spaces-kickoff/index.html"
+status = 200
+    
+
+[[redirects]]
 from = "2024-12-24_xmas"
 to = "https://slides.markusritschel.de/2024/xmas/"
 status = 301
