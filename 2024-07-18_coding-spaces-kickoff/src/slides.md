@@ -337,11 +337,9 @@ Drop us an email:
 </span>
 
 <div absolute bottom-10 w-full w-min op60 flex="~ gap-1" items-center justify-center>
-  <div i-ri-user-3-line op70 ma text-xl />
-  <div><a href="https://markusritschel.de" target="_blank" class="border-none! font-300">markusritschel.de</a></div>
-  <div i-ri-github-line op70 ma text-xl ml4/>
+  <div i-ri-github-line op70 ma text-xl />
   <div><a href="https://github.com/markusritschel" target="_blank" class="border-none! font-300">markusritschel</a></div>
-  <div i-ri-github-line op70 ma text-xl ml4/>
+  <div i-ri-github-line op70 ma text-xl ml4 />
   <div><a href="https://github.com/ysorge" target="_blank" class="border-none! font-300">ysorge</a></div>
 </div>
 
