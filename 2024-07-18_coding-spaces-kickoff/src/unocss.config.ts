@@ -1,12 +1,9 @@
-import config from '@slidev/client/uno.config'
+import config from '@slidev/client/uno.config.ts'
 import { defineConfig, mergeConfigs } from 'unocss'
 import { presetAttributify, presetIcons, presetUno, presetWebFonts, presetTypography } from 'unocss'
 import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
 
 import { presetScrollbar } from 'unocss-preset-scrollbar'
-
-// import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
-// https://unocss.dev/presets/web-fonts
 
 export default mergeConfigs([
   config,
@@ -18,7 +15,7 @@ export default mergeConfigs([
     // https://unocss.dev/config/theme
     theme:{
       fontFamily: {
-        mypixel: 'Pixel Square',
+        pixel: 'Pixel Square',
       },
       colors: {
         brand: {
@@ -41,7 +38,7 @@ export default mergeConfigs([
           strong: 'Rubik Iso',
           fast: 'Ubuntu',
           hand: 'Caveat',
-          pixel: 'Tourney',
+          display: 'Tourney',
         },
       }),
     ],
