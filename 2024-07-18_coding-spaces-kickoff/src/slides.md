@@ -347,7 +347,7 @@ Packaging your Code
 </div>
 
 <!--
-<img src="./code-management.png" abs-tr top-5 right-5 w-70 />
+<img src="/code-management.png" abs-tr top-5 right-5 w-70 />
 -->
 
 ---
@@ -431,7 +431,7 @@ Code Reviews & Walkthroughs
 </div>
 
 
-<img src="./wtf-per-minute.jpg" dark:invert border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-60 />
+<img src="/wtf-per-minute.jpg" dark:invert border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-60 />
 
 ---
 layout: center
@@ -467,7 +467,7 @@ layout: center
   </div>
 </div>
 
-<img src="./machines-on-planet.png" border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-60 />
+<img src="/machines-on-planet.png" border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-60 />
 
 ---
 layout: center
@@ -482,7 +482,7 @@ reproducible data handling!</span>
 - Standards in Earth System Sciences
 - Data Versioning
 
-<img src="./plug-hub-world.png" border-rd-lg b-1 b-hex-555 abs-br bottom-5 right-5 w-60 />
+<img src="/plug-hub-world.png" border-rd-lg b-1 b-hex-555 abs-br bottom-5 right-5 w-60 />
 
 ---
 layout: center
@@ -522,7 +522,7 @@ Drop us an email:
   <div><a href="https://github.com/ysorge" target="_blank" class="border-none! font-300">ysorge</a></div>
 </div>
 
-<img src="./pythonia-laptop.png" abs-br bottom-10 right-10 w-80 transform-scale-x--100 />
+<img src="/pythonia-laptop.png" abs-br bottom-10 right-10 w-80 transform-scale-x--100 />
 
 
 ---
