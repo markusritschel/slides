@@ -32,15 +32,12 @@ layout: cover
 </div>
 
 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
+<!-- <div class="abs-br m-6 flex gap-2">
   <a href="https://github.com/markusritschel/slides/tree/main/2024-07-18_coding-spaces-kickoff" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:logo-github />
   </a>
-</div>
+</div> -->
 
 <!--
 A brief presentation of us.
@@ -77,7 +74,7 @@ title: Baker et al.
 </clipPath>
 </svg>
 
-<div v-click transition-opacity-1000 transition-delay-1500 class="[&>p]:(absolute font-size-3) [&>p>span]:(font-size-4 font-bold)">
+<div v-click transition-opacity-1000 forward:transition-delay-1500 class="[&>p]:(absolute font-size-3) [&>p>span]:(font-size-4 font-bold)">
   <p w-25 top-1 left-130 color-gray><span>7%</span> Don't know</p>
   <p w-35 top-10 left-155 color-blue><span>3%</span> No, there is no crisis</p>
   <p w-25 bottom-20 right-48 color-red-4><span>38%</span> Yes, there is a slight crisis</p>
@@ -97,25 +94,33 @@ title: Baker et al.
   }
 </style>
 
-<!-- 
+<!--
 Reproducibility and Code Quality in Earth System Sciences
 [click] We have a problem with reproducibility
 -->
 
-
 ---
 layout: center
+hide: true
 ---
 
 # What is the role of code in natural sciences?
 
-<!-- Get input fromt the audience -->
+<!--
+Get input fromt the audience
+-->
 
 ---
 layout: center
 ---
 
+<div :class="$clicks === 2 ? 'transition-delay-20 duration-400 op30' : ''">
+<div transition-all duration-400 ease-in-out :class="$clicks === 0 ? 'translate-y-30' : ''">
+
 # How do Code & Science relate?
+</div>
+
+<div v-click forward:transition-delay-400>
 
 - We typically see a paper/thesis as the way of communicating our science.
 - <span highlight>Code is more than just a tool</span> you use for your science.
@@ -123,9 +128,12 @@ It is the <span highlight>"true" documentation of *how* you obtained your result
 - Code is more than only instructions for the computer.
 It is interpreted by the computer but <span highlight>read and written by humans</span>.
 - It can help your readers <span highlight>comprehend, reproduce, and trust your science</span>.
+</div>
+</div>
 
+<div font-hand v-click text-2xl mt-5>
 <ph-arrow-right-duotone /> Do we handle code in an adequate way? 🤔
-
+</div>
 
 ---
 layout: center
@@ -144,7 +152,7 @@ how the data were processed?
 Probably no. The obvious next step would be to look at the code.
 </v-clicks>
 
-<!--
+ <!--
 When we read a … and wonder how the results were achieved, we would possibly like to 
 comprehend and maybe even reproduce them.
 [click] Let's see an example, which might be a bit exaggerated. However, in the one or the other
@@ -155,11 +163,12 @@ Were you able to reproduce the results or to comprehend how the data were proces
 
 ---
 layout: center
+class: click-slideup
 ---
 
-<v-clicks>
-From here, what aspects typically hinder you from reproducing the results?
+<span font-semibold>From here, what typically hinders you from reproducing the results?</span>
 
+<v-clicks>
 
 There is no code at all.
 
@@ -169,47 +178,41 @@ All the code is put in one very loooong Jupyter notebook.
 
 The code is of lousy quality (poorly documented, not self-explanatory, etc.).
 
-...
+etc.
 
 </v-clicks>
+
 
 <!--
 Get input
 -->
 
----
-layout: center
-hide: Tr
----
-
-There is no code at all.
-
-On request, the authors send you their scripts.
-
-All the code is put in one very loooong Jupyter notebook.
-
-The code is of lousy quality (poorly documented, not self-explanatory, etc.).
-
-...
 
 ---
 layout: center
-hide: True
 ---
 
-There is no code at all.
+<h2>How can we improve the situation?</h2>
 
-On request, the authors send you their scripts.
+<span text-orange>Share your code!</span><br/>
+The worst code shared is better than having it not shared at all.
 
-All the code is put in one very loooong Jupyter notebook.
+<div v-click>
+<div my-6 pl-20 font-hand>"But my code is ugly. I don't want to put it online!" 🥺</div> 
 
-The code is of lousy quality (poorly documented, not self-explanatory, etc.).
+Mmm… do you suffer from code shaming? 🤔
+<!-- <img abs-tr w-50 top-50 right-10 src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*m3DDxqIYjxGnO5PoVPwOrw@2x.jpeg" /> -->
+</div>
 
-...
+<v-click>
+You can have fun improving it! Make the fruits of your work more understandable, <br />
+modular, reproducible, reusable, ...
+</v-click>
 
-<!--
+<!-- 
 Share your code… → Get input (How do you share your code? Do you share it?)
 -->
+
 
 ---
 layout: center
@@ -238,30 +241,34 @@ layout: center
 layout: center
 ---
 
-## Easier said than done? <span color-white:50 v-click>Maybe.</span>
+<div transition-all duration-400 ease-in-out :class="$clicks < 2 ? 'translate-y-40' : ''">
+
+## Easier said than done? <span color-gray:70 v-click>Maybe.</span>
+
+</div>
 
 <div mt-8>
-<v-click>
-However, it's all about
-</v-click>
+<div forward:transition-delay-400 v-click>
+But you <i>can</i> get there 🚀
+</div>
 
 <div grid="~ cols-content_auto items-center gap-4" py4 px4>
 
-<div flex="~ gap-5 items-center" text-orange v-click>
+<div flex="~ gap-5 items-center" text-orange:80 v-click>
   <div font-size-8 i-vscode-icons-folder-type-tools /> 
-  <span>knowing and mastering your tools (coding is a craft)</span>
+  <span>Know and master your tools (coding is a craft).</span>
 </div>
-<div flex="~ gap-5 items-center" text-blue v-click>
+<div flex="~ gap-5 items-center" text-blue:80 v-click>
   <div font-size-8 i-flat-color-icons-workflow /> 
-  <span>having a reasonable workflow</span>
+  <span>Have a reasonable workflow.</span>
 </div>
-<div flex="~ gap-5 items-center" text-lime v-click>
+<div flex="~ gap-5 items-center" text-lime:80 v-click>
   <div font-size-8 i-icon-park-solid-concept-sharing /> 
-  <span>being aware of and following conventions and concepts</span>
+  <span>Be aware of and follow conventions and concepts. <br /><span op65>(They exist for a reason 😉)</span></span>
 </div>
-<div flex="~ gap-5 items-center" text-fuchsia v-click>
+<div flex="~ gap-5 items-center" text-fuchsia:80 v-click>
   <div font-size-8 i-material-symbols-routine-rounded /> 
-  <span>building habits and being consistent in what you do!</span>
+  <span>Build habits and be consistent in what you do!</span>
 </div>
 
 </div>
@@ -300,21 +307,24 @@ layout: center
 
 ---
 layout: center
+title: Code Management
 ---
 
-# Code Management
+<div transition-all duration-400 ease-in-out :class="$clicks === 0 ? 'translate-y-40' : ''">
+<h1>Code Management</h1>
 
 <span font-hand text-lg>Unleash the power of organized coding and collaboration magic!</span>
+</div>
 
 <div flex="~ col gap-1" pt6>
 
-<div flex="~ gap-3 items-center" text-xl text-red:80 v-click>
+<div flex="~ gap-3 items-center" text-xl text-red:80 v-click forward:transition-delay-400>
 <system-uicons-versions font-size-6 /> 
 Version Control & Collaborative Development
 </div>
 <div flex="~ gap-2 items-center" mb-3 ml-15 v-click>
   <div i-ph-arrow-bend-down-right-duotone op50 />
-  <span>How to keep track of your own and other people's changes </span>
+  <span>How to keep track of your own and other people's changes.</span>
 </div>
 
 <div flex="~ gap-3 items-center" text-xl text-lime:80 v-click>
@@ -323,7 +333,7 @@ Version Control & Collaborative Development
 </div>
 <div flex="~ gap-2 items-center" mb-3 ml-15 v-click>
   <div i-ph-arrow-bend-down-right-duotone op50 />
-  <span>Make your installation environment reproducible </span>
+  <span>Make your installation environment reproducible.</span>
 </div>
 
 <div flex="~ gap-3 items-center" text-xl text-fuchsia:80 v-click>
@@ -332,7 +342,7 @@ Continuous Integration
 </div>
 <div flex="~ gap-2 items-center" mb-3 ml-15 v-click>
   <div i-ph-arrow-bend-down-right-duotone op50 />
-  <span>Automatic execution of repetitive tasks </span>
+  <span>Automate the execution of repetitive tasks.</span>
 </div>
 
 <div flex="~ gap-3 items-center" text-xl text-yellow:80 v-click>
@@ -341,7 +351,7 @@ Packaging your Code
 </div>
 <div flex="~ gap-2 items-center" mb-3 ml-15 v-click>
   <div i-ph-arrow-bend-down-right-duotone op50 />
-  <span>make it installable, publish it </span>
+  <span>Make it installable, and how to publish it.</span>
 </div>
 
 </div>
@@ -352,21 +362,24 @@ Packaging your Code
 
 ---
 layout: center
+title: Principles and Practices
 ---
 
-# Principles and Practices
+<div transition-all duration-400 ease-in-out :class="$clicks === 0 ? 'translate-y-40' : ''">
+<h1>Principles and Practices</h1>
 
 <span font-hand text-lg>Crack the code to clean, elegant, and rock-solid programming!</span>
+</div>
 
 <div flex="~ col gap-1" pt6>
 
-  <div flex="~ gap-3 items-center" text-xl text-cyan:80 v-click>
+  <div flex="~ gap-3 items-center" text-xl text-cyan:80 v-click forward:transition-delay-400>
     <mdi-monitor-clean font-size-6 />
-    Programming principles / Clean Code
+    Programming Principles / Clean Code
   </div>
   <div flex="~ gap-2 items-center" mb-3 ml-15 v-click>
     <div i-ph-arrow-bend-down-right-duotone op50 />
-    <span>How to outline and structure your code.</span>
+    <span>How to write clear and understandable code.</span>
   </div>
   <div flex="~ gap-3 items-center" text-xl text-rose:80 v-click>
     <material-symbols-architecture font-size-6 />
@@ -374,7 +387,7 @@ layout: center
   </div>
   <div flex="~ gap-2 items-center" mb-3 ml-15 v-click>
     <div i-ph-arrow-bend-down-right-duotone op50 />
-    <span>Text</span>
+    <span>How to outline and structure your code.</span>
   </div>
   <div flex="~ gap-3 items-center" text-xl text-orange:80 v-click>
     <fluent-mdl2-ungroup-object font-size-6 />
@@ -382,10 +395,12 @@ layout: center
   </div>
   <div flex="~ gap-2 items-center" mb-3 ml-15 v-click>
     <div i-ph-arrow-bend-down-right-duotone op50 />
-    <span>Learn how to program with classes</span>
+    <span>Learn how to program with classes.</span>
   </div>
 
 </div>
+
+<!-- <img src="https://imgs.xkcd.com/comics/code_quality.png" dark:invert border-rd-lg b-1 b-hex-555 abs-br bottom-2 right-2 w-80 v-click="1" /> -->
 
 <!--
 div[flex="~ col gap-1" pt6]>((div[flex="~ gap-3 items-center" text-xl. text-yellow:80. v-click.]>cib-pypi[font-size-6.]/{Test $}^div[flex="~ gap-2 items-center"m b-3. ml-15.v- click.]>div[i-ph-arrow-bend-down-right-duotone. op50.]/>span{Text}))*3
@@ -393,15 +408,18 @@ div[flex="~ col gap-1" pt6]>((div[flex="~ gap-3 items-center" text-xl. text-yell
 
 ---
 layout: center
+title: Quality and Testing
 ---
 
-# Quality and Testing
+<div transition-all duration-400 ease-in-out :class="$clicks === 0 ? 'translate-y-40' : ''">
+<h1>Quality and Testing</h1>
 
 <span font-hand text-lg>Turn your code into a fortress of perfection with bulletproof quality and testing!</span>
+</div>
 
 <div flex="~ col gap-1" pt6>
 
-<div flex="~ gap-3 items-center" text-xl text-blue:80 v-click>
+<div flex="~ gap-3 items-center" text-xl text-blue:80 v-click forward:transition-delay-400>
 <oui-documentation font-size-6 /> 
 Code Documentation
 </div>
@@ -431,17 +449,21 @@ Code Reviews & Walkthroughs
 </div>
 
 
-<img src="/wtf-per-minute.jpg" dark:invert border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-60 />
+<img src="/wtf-per-minute.jpg" dark:invert border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-50 v-click="1" />
 
 ---
 layout: center
+title: Development Tools
 ---
 
-# Development Tools
+<div transition-all duration-400 ease-in-out :class="$clicks === 0 ? 'translate-y-40' : ''">
+<h1>Development Tools</h1>
+
 <span font-hand text-lg>Turbocharge your coding with the coolest tools and AI sidekicks!</span>
+</div>
 
 <div flex="~ col gap-1" pt6>
-  <div flex="~ gap-3 items-center" text-xl text-blue:80 v-click>
+  <div flex="~ gap-3 items-center" text-xl text-blue:80 v-click forward:transition-delay-400>
     <vscode-icons-file-type-vscode font-size-6 />
     Integrated Development Environments
   </div>
@@ -467,34 +489,48 @@ layout: center
   </div>
 </div>
 
-<img src="/machines-on-planet.png" border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-60 />
+<img src="/machines-on-planet.png" border-rd-lg b-1 b-hex-555 abs-tr top-5 right-5 w-60 v-click="1" />
 
 ---
 layout: center
+title: Data Management
 ---
 
-# Data Management
+<div transition-all duration-400 ease-in-out :class="$clicks === 0 ? 'translate-y-20' : ''">
+<h1>Data Management</h1>
 
 <span font-hand text-lg>Become a data wizard, mastering the magic of FAIR and
 reproducible data handling!</span>
+</div>
+
+<div v-click forward:transition-delay-400>
 
 - FAIR Data Principles in Practice
 - Standards in Earth System Sciences
 - Data Versioning
 
-<img src="/plug-hub-world.png" border-rd-lg b-1 b-hex-555 abs-br bottom-5 right-5 w-60 />
+</div>
+
+<img src="/plug-hub-world.png" border-rd-lg b-1 b-hex-555 abs-br bottom-5 right-5 w-60 v-click="1" />
 
 ---
 layout: center
+title: Special Topics
 ---
 
-# Special Topics
+<div transition-all duration-400 ease-in-out :class="$clicks === 0 ? 'translate-y-20' : ''">
+<h1>Special Topics</h1>
 
 <span font-hand text-lg>Step into the adventure zone of coding with exciting and unexpected challenges!</span>
+</div>
+
+<div v-click forward:transition-delay-400>
 
 - Jupyter Notebooks vs. Standalone Applications
 - Developing CLI interfaces
 - Your wishes ...
+
+</div>
 
 ---
 
