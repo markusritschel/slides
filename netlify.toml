@@ -38,6 +38,22 @@ status = 200
     
 
 [[redirects]]
+from = "slides/2024-10-01_coding-spaces-vcs"
+to = "https://slides.markusritschel.de/2024/coding-spaces-vcs/"
+status = 301
+
+[[redirects]]
+from = "/2024/coding-spaces-vcs/src"
+to = "https://github.com/markusritschel/slides/tree/main/slides/2024-10-01_coding-spaces-vcs"
+status = 302
+
+[[redirects]]
+from = "/2024/coding-spaces-vcs/*"
+to = "/2024/coding-spaces-vcs/index.html"
+status = 200
+    
+
+[[redirects]]
 from = "/"
 to = "https://markusritschel.de/presentations"
 status = 302
