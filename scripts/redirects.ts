@@ -1,3 +1,5 @@
+// TODO: This script currently searches for package.json files in */src/ directories and from there, determines the files that Netlify should serve.. It also only registers a slide if there is a command with `--build` in the package.json found.
+// TODO: Modify the script such that it serves also PDF files that exist in a subdirectory without src/ and package.json
 import fs from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import process from 'node:process'
@@ -6,7 +8,7 @@ import fg from 'fast-glob'
 // NOTE: Add personal URLs here
 const github_repo = "https://github.com/markusritschel/slides"
 const talks_base_url = "https://slides.markusritschel.de"
-const talks_overview_website = "https://markusritschel.de/talks"
+const talks_overview_website = "https://markusritschel.de/presentations"
 
 // Finding all package.json files in the src directories of subdirectories
 const packageFiles = (await fg('*/src/package.json', {

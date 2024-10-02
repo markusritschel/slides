@@ -97,5 +97,5 @@ status = 200
 
 [[redirects]]
 from = "/"
-to = "https://markusritschel.de/talks"
+to = "https://markusritschel.de/presentations"
 status = 302
