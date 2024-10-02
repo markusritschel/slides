@@ -1,23 +1,41 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Welcome to my slides repository
 
-To start the slide show:
+Here, I collect all my presentations created with [Slidev](https://github.com/slidevjs/slidev).
+
+The repository is observed by [Netlify](https://www.netlify.com/), where the slides get hosted.
+
+
+## Local usage
+First, clone the repository to your local machine.
+
+Then, to start the slide show:
 
 - `npm install`
 - `npm run dev`
+- select a presentation directory
 - visit <http://localhost:3030>
 
-Edit the [slides.md](./slides.md) to see the changes.
+Edit the corresponding `slides.md` to see the changes.
 
 Learn more about Slidev at the [documentation](https://sli.dev/).
 
 
-All new slideshows must be placed in a directory following the structure `yyyy-mm-dd/src/`.
+## Creating a new slideshow
+> [!NOTE]
+> All new slideshows must be placed in a directory following the structure `slides/yyyy-mm-dd_<name>/src/`.
 
-
-To create a new slideshow, type `npm run new-talk`.
+To create a new slideshow, execute `npm run new-talk` in the terminal.
 This will ask you for a `date` and a `talkName`.
-It creates a `{date}_{talkName}` directory, creates a slidev project in src, and removes redundant files.
-Now, get started inside `src`.
+It will then create the following directory structure:
+```
+.
+├── slides
+│   └── 2024-07-18_my-talk
+│       ├── README.md
+│       └── src                 <-- the Slidev project
+```
+initialize a Slidev project inside `src` and remove redundant files.
+Now, you can start to edit inside `src`.
 
-When you're done, execute `npm run update` to update the netlify.toml.
-Once you push, Netlify will parse
+Once you push the changes to the online repository, a git post-commit hook will automatically update the netlify.toml file to include the new slideshow.
+This can also be achieved by running `npm run update`.
