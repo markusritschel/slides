@@ -11,7 +11,7 @@ const talks_base_url = "https://slides.markusritschel.de"
 const talks_overview_website = "https://markusritschel.de/presentations"
 
 // Finding all package.json files in the src directories of subdirectories
-const packageFiles = (await fg('*/src/package.json', {
+const packageFiles = (await fg('slides/*/src/package.json', {
   onlyFiles: true,
 })).sort()
 
@@ -84,7 +84,7 @@ const content = `#
 #
 
 [build]
-publish = "dist"
+publish = "slides/dist"
 command = "pnpm run build"
 
 [build.environment]

@@ -4,8 +4,10 @@ import { fileURLToPath } from 'node:url'
 import prompts from 'prompts'
 import { execa } from 'execa'
 
+const baseDir = "slides"
+
 async function startPicker(args: string[]) {
-  const folders = (await fs.readdir(new URL('..', import.meta.url), { withFileTypes: true }))
+  const folders = (await fs.readdir(new URL(`../${baseDir}`, import.meta.url), { withFileTypes: true }))
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
     .filter(folder => folder.match(/^\d{4}-/))
@@ -26,9 +28,9 @@ async function startPicker(args: string[]) {
 
   if (result.folder) {
     if (args[0] === 'dev')
-      execa('code', [fileURLToPath(new URL(`../${result.folder}/src/slides.md`, import.meta.url))])
+      execa('code', [fileURLToPath(new URL(`../${baseDir}/${result.folder}/src/slides.md`, import.meta.url))])
     await execa('pnpm', ['run', ...args], {
-      cwd: new URL(`../${result.folder}/src`, import.meta.url),
+      cwd: new URL(`../${baseDir}/${result.folder}/src`, import.meta.url),
       stdio: 'inherit',
     })
   }

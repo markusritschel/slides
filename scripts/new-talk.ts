@@ -3,6 +3,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { execSync } from 'child_process';
 
+const baseDir = 'slides';
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -11,7 +13,8 @@ const rl = readline.createInterface({
 rl.question('Enter the date (YYYY-MM-DD): ', (date) => {
     rl.question('Enter the talk name: ', (talkName) => {
         const dirName = `${date}_${talkName}`;
-        const dirPath = path.join(process.cwd(), dirName);
+        const basePath = path.join(process.cwd(), baseDir);
+        const dirPath = path.join(basePath, dirName);
         const srcPath = path.join(dirPath, 'src');
 
         // Create the sub-directory
