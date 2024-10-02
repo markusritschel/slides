@@ -22,10 +22,7 @@ layout: cover
 
 
 <div mt--55 w-125 ml-auto>
-  <div bg-hex-ffffff77 rounded-3 pt-3>
-    <h1 font-pixel text-align-center uppercase text-gradient style="letter-spacing: -5px">Coding Spaces</h1>
-  </div>
-
+  <img translate-x-8 my-4 top-25 op70 w-120 src="/coding-spaces-logo.png" />
   <h3 op70 text-align-right pr-5>
     Why a Good Coding Practice Matters
   </h3>
