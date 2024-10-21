@@ -15,7 +15,7 @@ export default mergeConfigs([
     // https://unocss.dev/config/theme
     theme:{
       fontFamily: {
-        pixel: 'Pixel Square',
+        pixel: 'Pixel Square'
       },
       colors: {
         brand: {
@@ -39,6 +39,8 @@ export default mergeConfigs([
           fast: 'Ubuntu',
           hand: 'Caveat',
           display: 'Tourney',
+          blackboard: 'Walter Turncoat',
+          flower: 'Indie Flower'
         },
       }),
     ],

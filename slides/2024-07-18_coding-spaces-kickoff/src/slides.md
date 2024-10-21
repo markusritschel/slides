@@ -48,10 +48,14 @@ layout: center
 class: text-center
 ---
 
+<div font-blackboard>
+
 ## Why are you here?
 <br />
 
 ## What do you expect?
+
+</div>
 
 <!-- 
 (Collect topics on the whiteboard?)
