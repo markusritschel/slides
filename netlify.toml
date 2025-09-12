@@ -29,6 +29,21 @@ status = 301
 
 
 [[redirects]]
+from = "/2020-12-12_old-xmas/pdf"
+to = "https://github.com/markusritschel/slides/blob/main/slides/2020-12-12_old-xmas/2020-12-12_old-xmas.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2020-12-12_old-xmas/src"
+to = "https://github.com/markusritschel/slides/tree/main/slides/2020-12-12_old-xmas"
+status = 302
+
+[[redirects]]
+from = "/2020-12-12_old-xmas/*"
+to = "/2020-12-12_old-xmas/index.html"
+status = 200
+
+[[redirects]]
 from = "/2024-07-18_coding-spaces-kickoff/pdf"
 to = "https://github.com/markusritschel/slides/blob/main/slides/2024-07-18_coding-spaces-kickoff/2024-07-18_coding-spaces-kickoff.pdf?raw=true"
 status = 302
