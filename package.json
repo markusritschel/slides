@@ -9,11 +9,22 @@
     "clean": "rimraf **/dist"
   },
   "devDependencies": {
-    "@iconify/json": "catalog",
-    "execa": "^9.6.0",
-    "fast-glob": "^3.3.3",
-    "prompts": "^2.4.2",
-    "rimraf": "^6.0.1",
-    "tsx": "^4.20.5"
+    "@eslint/config-inspector": "catalog:",
+    "@iconify/json": "catalog:",
+    "@slidev/cli": "catalog:",
+    "@slidev/client": "catalog:",
+    "@slidev/theme-default": "catalog:",
+    "@types/node": "catalog:",
+    "@types/prompts": "catalog:",
+    "@types/seedrandom": "catalog:",
+    "execa": "catalog:",
+    "fast-glob": "catalog:",
+    "markdown-it-magic-link": "catalog:",
+    "pnpm": "catalog:",
+    "prettier-plugin-slidev": "catalog:",
+    "prompts": "catalog:",
+    "rimraf": "catalog:",
+    "typescript": "catalog:",
+    "unocss": "catalog:"
   }
 }
