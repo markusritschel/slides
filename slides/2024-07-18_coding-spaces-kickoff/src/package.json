@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build --base /2024-07-18_coding-spaces-kickoff/ --out ../../../dist/2024-07-18_coding-spaces-kickoff",
+    "export": "slidev export --per-slide --output ../2024-07-18_coding-spaces-kickoff.pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "latest",
+    "@slidev/theme-default": "latest",
+    "unocss-preset-scrollbar": "latest"
+  }
+}
