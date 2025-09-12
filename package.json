@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "new": "tsx scripts/create-presentation.ts",
+    "dev": "tsx scripts/picker.ts dev",
+    "build": "rimraf slides/dist && pnpm -r run build",
+    "update-netlify": "tsx scripts/netlify-redirects.ts",
+    "clean": "rimraf **/dist"
+  },
+  "devDependencies": {
+    "@iconify/json": "catalog",
+    "execa": "^9.6.0",
+    "fast-glob": "^3.3.3",
+    "prompts": "^2.4.2",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.20.5"
+  }
+}

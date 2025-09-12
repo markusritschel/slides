@@ -1,0 +1,24 @@
+packages:
+  - slides/*/src
+
+catalog:
+  '@eslint/config-inspector': ^1.2.0
+  '@iconify/json': ^2.2.383
+  '@slidev/cli': ^52.1.0
+  '@slidev/client': ^52.1.0
+  '@slidev/theme-default': ^0.25.0
+  '@types/node': ^24.3.1
+  '@types/prompts': ^2.4.9
+  '@types/seedrandom': ^3.0.8
+  execa: ^9.6.0
+  fast-glob: ^3.3.3
+  markdown-it-magic-link: ^0.1.4
+  pnpm: ^10.15.1
+  prettier-plugin-slidev: ^1.0.5
+  prompts: ^2.4.2
+  rimraf: ^6.0.1
+  typescript: ^5.9.2
+  unocss: ^66.5.1
+
+onlyBuiltDependencies:
+  - esbuild
