@@ -29,21 +29,6 @@ status = 301
 
 
 [[redirects]]
-from = "/2020-12-12_old-xmas/pdf"
-to = "https://github.com/markusritschel/slides/blob/main/slides/2020-12-12_old-xmas/2020-12-12_old-xmas.pdf?raw=true"
-status = 302
-
-[[redirects]]
-from = "/2020-12-12_old-xmas/src"
-to = "https://github.com/markusritschel/slides/tree/main/slides/2020-12-12_old-xmas"
-status = 302
-
-[[redirects]]
-from = "/2020-12-12_old-xmas/*"
-to = "/2020-12-12_old-xmas/index.html"
-status = 200
-
-[[redirects]]
 from = "/2024-07-18_coding-spaces-kickoff/pdf"
 to = "https://github.com/markusritschel/slides/blob/main/slides/2024-07-18_coding-spaces-kickoff/2024-07-18_coding-spaces-kickoff.pdf?raw=true"
 status = 302
@@ -55,5 +40,65 @@ status = 302
 
 [[redirects]]
 from = "/2024-07-18_coding-spaces-kickoff/*"
-to = "/2024-07-18_coding-spaces-kickoff/index.html"
+to = "/2024-07-18_coding-spaces-kickoff/:splat"
+status = 200
+
+[[redirects]]
+from = "/2024-10-01_coding-spaces-vcs/pdf"
+to = "https://github.com/markusritschel/slides/blob/main/slides/2024-10-01_coding-spaces-vcs/2024-10-01_coding-spaces-vcs.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2024-10-01_coding-spaces-vcs/src"
+to = "https://github.com/markusritschel/slides/tree/main/slides/2024-10-01_coding-spaces-vcs"
+status = 302
+
+[[redirects]]
+from = "/2024-10-01_coding-spaces-vcs/*"
+to = "/2024-10-01_coding-spaces-vcs/:splat"
+status = 200
+
+[[redirects]]
+from = "/2024-10-02_coding-spaces-vcs/pdf"
+to = "https://github.com/markusritschel/slides/blob/main/slides/2024-10-02_coding-spaces-vcs/2024-10-02_coding-spaces-vcs.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2024-10-02_coding-spaces-vcs/src"
+to = "https://github.com/markusritschel/slides/tree/main/slides/2024-10-02_coding-spaces-vcs"
+status = 302
+
+[[redirects]]
+from = "/2024-10-02_coding-spaces-vcs/*"
+to = "/2024-10-02_coding-spaces-vcs/:splat"
+status = 200
+
+[[redirects]]
+from = "/2025-01-01_feature-playground/pdf"
+to = "https://github.com/markusritschel/slides/blob/main/slides/2025-01-01_feature-playground/2025-01-01_feature-playground.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2025-01-01_feature-playground/src"
+to = "https://github.com/markusritschel/slides/tree/main/slides/2025-01-01_feature-playground"
+status = 302
+
+[[redirects]]
+from = "/2025-01-01_feature-playground/*"
+to = "/2025-01-01_feature-playground/:splat"
+status = 200
+
+[[redirects]]
+from = "/2025-09-11_gcp-sea-ice-in-the-arctic/pdf"
+to = "https://github.com/markusritschel/slides/blob/main/slides/2025-09-11_gcp-sea-ice-in-the-arctic/2025-09-11_gcp-sea-ice-in-the-arctic.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2025-09-11_gcp-sea-ice-in-the-arctic/src"
+to = "https://github.com/markusritschel/slides/tree/main/slides/2025-09-11_gcp-sea-ice-in-the-arctic"
+status = 302
+
+[[redirects]]
+from = "/2025-09-11_gcp-sea-ice-in-the-arctic/*"
+to = "/2025-09-11_gcp-sea-ice-in-the-arctic/:splat"
 status = 200

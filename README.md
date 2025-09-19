@@ -44,6 +44,8 @@ initialize a Slidev project inside `src` and remove redundant files.
 Now, you can start to edit inside `src`.
 
 
+## Publish slides online
+
 Before pushing the changes to the online repository, make sure that the individual presentations run and that your `netlify.toml` is up-to-date.
 To update the `netlify.toml` run
 ```
@@ -57,3 +59,8 @@ npm run update
 git add netlify.toml
 git commit --amend --no-edit
 ```
+
+
+## Tipps
+
+Use the [interactive UnoCSS documentation](https://unocss.dev/interactive/) as well as the [interactive iconify database](https://icon-sets.iconify.design/).
