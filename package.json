@@ -2,9 +2,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "new": "tsx scripts/create-presentation.ts",
-    "dev": "tsx scripts/picker.ts dev",
     "build": "rimraf slides/dist && pnpm -r run build",
+    "dev": "tsx scripts/picker.ts dev",
+    "new": "tsx scripts/create-presentation.ts",
+    "lint": "eslint .",
     "update-netlify": "tsx scripts/netlify-redirects.ts",
     "clean": "rimraf **/dist"
   },
@@ -17,14 +18,27 @@
     "@types/node": "catalog:",
     "@types/prompts": "catalog:",
     "@types/seedrandom": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-flat-gitignore": "catalog:",
+    "eslint-plugin-format": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "eslint-typegen": "catalog:",
     "execa": "catalog:",
     "fast-glob": "catalog:",
     "markdown-it-magic-link": "catalog:",
+    "playwright-chromium": "^1.55.0",
     "pnpm": "catalog:",
     "prettier-plugin-slidev": "catalog:",
     "prompts": "catalog:",
     "rimraf": "catalog:",
     "typescript": "catalog:",
-    "unocss": "catalog:"
+    "unocss": "catalog:",
+    "vue-router": "catalog:",
+    "vue-tsc": "catalog:"
+  },
+  "dependencies": {
+    "@iconify-json/tabler": "^1.2.23",
+    "slidev-component-spotlight": "latest"
   }
 }
