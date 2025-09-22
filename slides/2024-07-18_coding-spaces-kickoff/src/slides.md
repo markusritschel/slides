@@ -14,6 +14,8 @@ transition: fade-out
 mdc: true
 background: coding-spaces-cover.png
 layout: cover
+addons:
+  - slidev-component-spotlight
 ---
 
 <!-- <img src="/coding-spaces-cover.png" w-full h-full object-cover /> -->
