@@ -93,7 +93,7 @@ status = 301
     // Add exact match for the presentation root
     redirects.push({
       from: `${urlPath}/*`,
-      to: `${urlPath}/index.html`,
+      to: `${urlPath}/:splat`,
       status: 200,
     })
 
