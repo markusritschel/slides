@@ -4,6 +4,8 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
 
+const author = "Markus Ritschel";
+
 async function main() {
   try {
     const response = await prompts([
@@ -47,65 +49,38 @@ function slugify(text: string): string {
     .replace(/^-+|-+$/g, '')     // Trim hyphens from start and end
 }
 
-async function createPackageJson(dir: string, date: string, slug: string) {
-  // const outPath = path.join(process.cwd(), "/dist/${date}_${slug}")
-  const relRoot = path.relative(dir, process.cwd())
-  const pkg = {
-    "private": true,
-    "type": "module",
-    "scripts": {
-      "dev": "slidev --open",
-      "build": `slidev build --base /${date}_${slug}/ --out ${relRoot}/dist/${date}_${slug}`,
-      "export": `slidev export --per-slide --output ../${date}_${slug}.pdf`
-    },
-    "dependencies": {
-      "@slidev/cli": "latest",
-      "@slidev/theme-default": "latest"
+function replacePlaceholders(content: string, replacements: Record<string, string>): string {
+  return Object.entries(replacements).reduce(
+    (acc, [key, value]) => acc.replace(new RegExp(`{{${key}}}`, "g"), value),
+    content
+  );
+}
+
+async function copyTemplateDir(
+  srcDir: string,
+  destDir: string,
+  replacements: Record<string, string>
+) {
+  await fs.mkdir(destDir, { recursive: true });
+  const entries = await fs.readdir(srcDir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = path.join(srcDir, entry.name);
+
+    // Replace placeholders in file/folder names
+    const destName = replacePlaceholders(entry.name, replacements);
+    const destPath = path.join(destDir, destName);
+
+    if (entry.isDirectory()) {
+      await copyTemplateDir(srcPath, destPath, replacements);
+    } else if (entry.isFile()) {
+      const content = await fs.readFile(srcPath, "utf-8");
+      const replaced = replacePlaceholders(content, replacements);
+      await fs.writeFile(destPath, replaced, "utf-8");
     }
   }
-  
-  await fs.writeFile(
-    path.join(dir, 'package.json'),
-    JSON.stringify(pkg, null, 2)
-  )
 }
 
-async function createInitialSlides(dir: string, name: string) {
-  const slidesContent = `---
-theme: default
-title: ${name}
----
-
-# ${name}
-
----
-
-# Agenda
-
-1. First Point
-2. Second Point
-3. Third Point`
-
-  await fs.writeFile(path.join(dir, 'slides.md'), slidesContent)
-}
-
-async function createReadme(dir: string, date: string, name: string) {
-    const readmeContent = `# ${name}
-
-Presentation given on ${date}
-
-To start the slide show:
-
-- \`pnpm install\`
-- \`pnpm dev\`
-- visit <http://localhost:3030>
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev at the [documentation](https://sli.dev/).
-`
-  await fs.writeFile(path.join(dir, 'README.md'), readmeContent)
-}
 
 async function createPresentation({ date, name }: { date: string; name: string }) {
   const slug = slugify(name)
@@ -113,9 +88,13 @@ async function createPresentation({ date, name }: { date: string; name: string }
   const srcDir = path.join(dir, 'src')
   
   await fs.mkdir(srcDir, { recursive: true })
-  await createPackageJson(srcDir, date, slug)
-  await createInitialSlides(srcDir, name)
-  await createReadme(dir, date, name)
+  const replacements = {
+    author_name: author,
+    presentation_name: name,
+    presentation_date: date,
+    presentation_dir: `${date}_${slug}`
+  }
+  await copyTemplateDir("./template", dir, replacements);
 
   // Install dependencies with exact versions
   console.log('Installing dependencies...')

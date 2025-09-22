@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "slidev --open",
+        "build": "slidev build --base /{{presentation_dir}}/ --out ${relRoot}/dist/{{presentation_dir}}",
+        "export": "slidev export --per-slide --output ../{{presentation_dir}}.pdf"
+    },
+    "dependencies": {
+        "@slidev/cli": "latest",
+        "@slidev/theme-default": "latest"
+    },
+    "slidev": {
+        "addons": [
+        "slidev-component-spotlight",
+        "fancy-arrow"
+        ]
+    }
+  }
